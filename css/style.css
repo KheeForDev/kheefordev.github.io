@@ -517,7 +517,10 @@ figure {
 /*# sourceMappingURL=style.css.map */
 
 
-/* Custom CSS - To underline and set color to text */
+/* Khee Houy, Tan Custom CSS */
+
+
+/* To underline and set color to text */
 
 .underline {
     text-decoration: underline;
@@ -525,11 +528,24 @@ figure {
 }
 
 
-/* Custom CSS - Mask profile picture by a circle */
+/* Mask profile picture by a circle */
 
 .circular-crop {
     border-radius: 50%;
     width: 140px;
     height: 140px;
     object-fit: cover;
+}
+
+
+/* Style label with round corner for span tag */
+
+.skill-label {
+    background-color: #17e7a4;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 10pt;
+    color: black;
+    /* <span> tag is inline by default, so the text inside will break when wrapping happens. You can set it to display: inline-block */
+    display: inline-block;
 }
