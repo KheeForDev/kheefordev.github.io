@@ -516,7 +516,20 @@ figure {
 
 /*# sourceMappingURL=style.css.map */
 
+
+/* Custom CSS - To underline and set color to text */
+
 .underline {
     text-decoration: underline;
     color: #17e7a4;
+}
+
+
+/* Custom CSS - Mask profile picture by a circle */
+
+.circular-crop {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
 }

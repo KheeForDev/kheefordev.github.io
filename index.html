@@ -61,6 +61,23 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+    <!-- Custom script to get total number of working experience -->
+    <script type="text/javascript">
+        window.onload = codeAddress;
+
+        function codeAddress() {
+            var today = new Date();
+            var workDate = new Date("2015-09-01");
+            var expYear = today.getFullYear() - workDate.getFullYear();
+            var m = today.getMonth() - workDate.getMonth();
+
+            if (m < 0 || (m === 0 && today.getDate() < workDate.getDate())) {
+                expYear--;
+            }
+
+            document.getElementById('experience-year').innerHTML = expYear;
+        }
+    </script>
 </head>
 
 <body style="background-image: url(images/bg_img.jpg);">
@@ -79,7 +96,7 @@
                     <div class="row row-bottom-padded-sm">
                         <div class="col-md-12">
                             <figure>
-                                <img src="images/profile_img.png" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                                <img class="circular-crop" src="images/profile_img.png">
                             </figure>
                             <h1>Khee Houy, Tan</h1>
                             <p>Passionate in learning new technologies to improve myself and able to contribute when needed.</p>
@@ -90,7 +107,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 fh5co-counter">
-                            <div class="fh5co-number fh5co-left">6</div>
+                            <div class="fh5co-number fh5co-left" id="experience-year"></div>
                             <div class="fh5co-text">
                                 <h3 class="border-bottom">Years of experience in Software Development</h3>
                                 <p>Specialized in <span class="underline">Data Integration</span>, <span class="underline">RESTful Web Service</span>, <span class="underline">Web Application Development (Full Stack)</span>.</p>
